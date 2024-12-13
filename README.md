@@ -4,14 +4,14 @@ This experiment adds context to an Ollama model, by
 retrieving content from a list of URLs.
 
 The first variant is simplistic, it just adds MESSAGE
-instructions to an Ollama [https://github.com/ollama/ollama/blob/main/docs/modelfile.md](Modelfile)
+instructions to an Ollama [Modelfile](https://github.com/ollama/ollama/blob/main/docs/modelfile.md)
 
 It works, but only within the size of the model's context. It looks like MESSAGE instructions found earlier in the Modelfile are forgotten first.
 
-One obivous workaround is to use RAG instead, and include only elements which are
+One obvious workaround is to use RAG instead, and include only elements which are
 related to the current query in the context.
 
-## How to test this
+## How to test this
 
 Here's how to create your own custom model, after adapting
 the `modelhead.txt` and `urls.txt` files as desired:
